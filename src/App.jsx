@@ -12,7 +12,7 @@ export default function App() {
     <div className='container-fluid d-flex flex-column min-vh-100 bg-dark text-center text-white'>
       <Header title={"Activity 13"} count={count} />
       <Counter count={count} setCount={setCount} />
-      <Footer copyright={"Copyright © 2024 Ferangelo Tuason. All rights reserved."} />
+      <Footer copyright={"Copyright © 2024 Developed by Ferangelo Tuason. All rights reserved."} />
     </div>
   );
 }
