@@ -1,22 +1,19 @@
-import { useState } from 'react'
+import CountDisplay from './CountDisplay';
 
-export default function Counter() {
-    const [count, setCount] = useState(0);
-    
-
+export default function Counter({count, setCount}) {
     return (
         <>
-            <h2 className='p-5'>{count}</h2>
+            <CountDisplay props={count}/>
             <span>
-                <button className='me-2' onClick={()=>{
+                <button className='me-2 btn btn-primary' onClick={()=>{
                     setCount(count + 1);
                 }}>
-                    Increment
+                    Increment +
                 </button>
-                <button onClick={()=>{
+                <button className='btn btn-danger' onClick={()=>{
                     setCount(count - 1);
                 }}>
-                    Decrement
+                    Decrement -
                 </button>
             </span>
             { count < 0 && setCount(0) }
